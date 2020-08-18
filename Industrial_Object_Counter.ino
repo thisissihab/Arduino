@@ -5,15 +5,18 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 int count = 0;
 
+int in1 = 3;
+int in2 = 5;
+int in3 = 9;
+int in4 = 10;
+
 
 void setup() {
-  pinMode(2,OUTPUT);
-  pinMode(3,OUTPUT);
-  pinMode(5,OUTPUT);
-  pinMode(A4,OUTPUT);
-  pinMode(A1,OUTPUT);
-  pinMode(A2,OUTPUT);
-  pinMode(A3,OUTPUT);
+  
+  pinMode(in1,OUTPUT);
+  pinMode(in2,OUTPUT);
+  pinMode(in3,OUTPUT);
+  pinMode(in4,OUTPUT);
   Serial.begin(9600);
 
   lcd.begin(16, 2);
@@ -23,7 +26,7 @@ void setup() {
 }
 
 void loop() {
-  motor(80,80,1,0,1,0);
+  motor(80,80);
   Serial.println(digitalRead(10));
   
   
@@ -38,15 +41,13 @@ void loop() {
 
 }
 
-void motor(int a, int b, int c, int d, int e, int f){
-  digitalWrite(2,1);
-  analogWrite(3,a);
-  analogWrite(5,b);
+void motor(int pwm1, int pwm2)
+{
+  analogWrite(in1,pwm1);
+  analogWrite(in2,00);
   
-  digitalWrite(A3,c);
-  digitalWrite(A4,d);
-
-  digitalWrite(A1,e);
-  digitalWrite(A2,f);
+  analogWrite(in3,pwm2);
+  analogWrite(in4,00);
+  
   
   }
