@@ -1,7 +1,6 @@
 # IndustrialObjectCounter
-It was a project that I was intructed to submit for one of my enginnering courses The main function of this project was to count objects in an industrial production line. Motors,
-wheels and belts were used to create a simple miniature of industrial production line. An IR obstacle detector was used to detect objects and count them. Arduino was used as the 
-main controller. A LCD display eas used to show the number of counted objects.
+The main function of this project was to count objects in an industrial production line. Motors, wheels and belts were used to create a simple miniature of an industrial production line. An IR obstacle detector was used to detect objects and count them. Arduino was used as the 
+main controller. The number of counted objects was shown on a Liquid Crystal Display
 
 Used Equipments:
 1. Arduino Uno
